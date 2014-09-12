@@ -222,11 +222,12 @@ function checkall() {
  <form action=" " method="post" name="form1" id="queryDataForm" > 
     <div id="QueryDataDiv" style="width: 1024px; height: 700px; margin-top: 10px; overflow: auto;">
     	
+        <c:if test="${!empty names}">
         <div class="holder"></div>
-        <input type="text" name="record_id" id="record_id" value="${haveFits}"/>
         <input type="submit" value="Download table" id="sb2" onclick="downloadTable()"/>
         <c:if test="${!haveFits}">
         <input type="submit" value="Download fits" id="sb1" onclick="downloadFits()"/>
+        </c:if>
         </c:if>
 
         <table class="table table-hover table-bordered">
